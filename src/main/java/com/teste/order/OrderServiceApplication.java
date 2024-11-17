@@ -1,4 +1,4 @@
-package com.teste.orderservice;
+package com.teste.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
