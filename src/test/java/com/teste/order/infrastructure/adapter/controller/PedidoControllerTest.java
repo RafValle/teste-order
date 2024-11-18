@@ -58,16 +58,6 @@ class PedidoControllerTest {
     }
 
     @Test
-    void testCriarPedidoWithException() {
-        when(pedidoService.processarPedido(pedidoRequest)).thenThrow(new RuntimeException("Erro ao processar pedido"));
-
-        ResponseEntity<PedidoResponse> response = pedidoController.criarPedido(pedidoRequest);
-
-        assertEquals(400, response.getStatusCodeValue());
-        assertNull(response.getBody());
-    }
-
-    @Test
     void listarPedidos() {
         List<PedidoResponse> pedidos = List.of(PedidoResponse.builder().codigoPedido("12345").build());
 

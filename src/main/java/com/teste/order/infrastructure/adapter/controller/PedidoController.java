@@ -20,15 +20,9 @@ public class PedidoController {
     @PostMapping
     public ResponseEntity<PedidoResponse> criarPedido(@RequestBody PedidoRequest request) {
         log.info("Recebida requisição para criar um pedido: {}", request.getCodigoPedido());
-
-        try {
-            PedidoResponse response = pedidoService.processarPedido(request);
-            log.info("Pedido processado com sucesso: {}", response.getCodigoPedido());
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            log.error("Erro ao processar o pedido: {}", e.getMessage());
-            return ResponseEntity.badRequest().build();
-        }
+        PedidoResponse response = pedidoService.processarPedido(request);
+        log.info("Pedido processado com sucesso: {}", response.getCodigoPedido());
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping
