@@ -1,7 +1,7 @@
 
-# 📦 Order Service
+# 📦 Order
 
-**Order Service** é um sistema desenvolvido em **Java com Spring Boot** que gerencia pedidos recebidos de um sistema externo (Sistema A), processa esses pedidos, calcula o valor total e envia o resultado para outro sistema externo (Sistema B) via **Apache Kafka**.
+**Order** é um sistema desenvolvido em **Java com Spring Boot** que gerencia pedidos recebidos de um sistema externo (Sistema A), processa esses pedidos, calcula o valor total e envia o resultado para outro sistema externo (Sistema B) via **Apache Kafka**.
 
 ---
 
