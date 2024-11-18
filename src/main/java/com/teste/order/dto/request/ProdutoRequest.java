@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 
 @Data
 public class ProdutoRequest {
-    private String nome;
-    private BigDecimal valor;
+    private String codigoProduto;
+    private String nomeProduto;
+    private BigDecimal valorUnitario;
+    private int quantidade;
 }

@@ -1,26 +1,20 @@
 package com.teste.order.dto.response;
 
-import lombok.Data;
-import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProdutoResponse {
     private String codigoProduto;
-    private String nome;
-    private int quantidade;
+    private String nomeProduto;
     private BigDecimal valorUnitario;
+    private int quantidade;
     private BigDecimal valorTotal;
-
-    public static ProdutoResponse fromRequest(String codigoProduto, String nome, int quantidade, BigDecimal valorUnitario) {
-        return ProdutoResponse.builder()
-                .codigoProduto(codigoProduto)
-                .nome(nome)
-                .quantidade(quantidade)
-                .valorUnitario(valorUnitario)
-                .valorTotal(valorUnitario.multiply(BigDecimal.valueOf(quantidade)))
-                .build();
-    }
 }
