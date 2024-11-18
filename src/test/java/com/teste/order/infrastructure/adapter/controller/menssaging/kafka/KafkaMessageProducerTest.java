@@ -1,6 +1,7 @@
-package com.teste.order.infrastructure.messaging.kafka;
+package com.teste.order.infrastructure.adapter.controller.menssaging.kafka;
 
 import com.teste.order.dto.response.PedidoResponse;
+import com.teste.order.infrastructure.adapter.messaging.kafka.KafkaMessageProducer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

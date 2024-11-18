@@ -1,4 +1,4 @@
-package com.teste.order.infrastructure.exception;
+package com.teste.order.domain.exception;
 
 public class PedidoNotFoundException extends RuntimeException {
     public PedidoNotFoundException(String message) {

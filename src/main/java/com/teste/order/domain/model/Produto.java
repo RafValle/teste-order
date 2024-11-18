@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-
 @Entity
 @Data
 @NoArgsConstructor
@@ -37,4 +36,15 @@ public class Produto {
     @ManyToOne
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;
+
+    /**
+     * Método para calcular o valor total do produto com base na quantidade e no valor unitário.
+     */
+    public void calcularValorTotal() {
+        if (valorUnitario != null && quantidade > 0) {
+            this.valorTotal = valorUnitario.multiply(BigDecimal.valueOf(quantidade));
+        } else {
+            this.valorTotal = BigDecimal.ZERO;
+        }
+    }
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Pedido {
@@ -27,5 +27,14 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Produto> produtos;
-}
 
+    public void calcularValorTotal() {
+        if (produtos != null && !produtos.isEmpty()) {
+            this.valorTotal = produtos.stream()
+                    .map(Produto::getValorTotal)
+                    .reduce(BigDecimal.ZERO, BigDecimal::add);
+        } else {
+            this.valorTotal = BigDecimal.ZERO;
+        }
+    }
+}

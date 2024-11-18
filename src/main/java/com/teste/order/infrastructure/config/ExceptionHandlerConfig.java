@@ -1,5 +1,6 @@
-package com.teste.order.infrastructure.exception;
+package com.teste.order.infrastructure.config;
 
+import com.teste.order.domain.exception.PedidoNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

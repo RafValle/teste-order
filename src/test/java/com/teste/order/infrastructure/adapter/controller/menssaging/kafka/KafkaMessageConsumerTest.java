@@ -1,14 +1,14 @@
-package com.teste.order.infrastructure.messaging.kafka;
+package com.teste.order.infrastructure.adapter.controller.menssaging.kafka;
 
 import com.teste.order.application.service.PedidoService;
 import com.teste.order.dto.response.PedidoResponse;
+import com.teste.order.infrastructure.adapter.messaging.kafka.KafkaMessageConsumer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.kafka.annotation.KafkaListener;
 
 import java.math.BigDecimal;
 

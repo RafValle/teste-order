@@ -1,8 +1,8 @@
-package com.teste.order.infrastructure.messaging.kafka;
+package com.teste.order.infrastructure.adapter.messaging.kafka;
 
 import com.teste.order.application.service.PedidoService;
 import com.teste.order.dto.response.PedidoResponse;
-import com.teste.order.infrastructure.messaging.MessageConsumer;
+import com.teste.order.infrastructure.adapter.messaging.MessageConsumer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;

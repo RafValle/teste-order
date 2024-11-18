@@ -1,20 +1,19 @@
 package com.teste.order.infrastructure.exception;
 
+import com.teste.order.domain.exception.PedidoNotFoundException;
+import com.teste.order.infrastructure.config.ExceptionHandlerConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.mock.web.MockHttpServletRequest;
 
-import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 class ExceptionHandlerConfigTest {
 
